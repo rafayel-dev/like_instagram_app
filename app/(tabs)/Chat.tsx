@@ -12,103 +12,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { ThemedText } from "@/components/themed-text";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
-
-const MOCK_NOTES = [
-  {
-    id: "1",
-    name: "Your note",
-    note: "Leave a note",
-    avatar: "https://i.pravatar.cc/150?u=me",
-    isMe: true,
-  },
-  {
-    id: "2",
-    name: "Jane",
-    note: "Need coffee",
-    avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
-    isMe: false,
-  },
-  {
-    id: "3",
-    name: "John",
-    note: "Gym time",
-    avatar: "https://i.pravatar.cc/150?u=1",
-    isMe: false,
-  },
-  {
-    id: "4",
-    name: "Emily",
-    note: "Sleepy",
-    avatar: "https://i.pravatar.cc/150?u=4",
-    isMe: false,
-  },
-  {
-    id: "5",
-    name: "Mike",
-    note: "Working...",
-    avatar: "https://i.pravatar.cc/150?u=5",
-    isMe: false,
-  },
-];
-
-const MOCK_CHATS = [
-  {
-    id: "1",
-    name: "Jane Doe",
-    lastMessage: "Sent you a reel.",
-    time: "2m",
-    unread: true,
-    avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
-  },
-  {
-    id: "2",
-    name: "John Smith",
-    lastMessage: "Reacted to your message.",
-    time: "1h",
-    unread: false,
-    avatar: "https://i.pravatar.cc/150?u=1",
-  },
-  {
-    id: "3",
-    name: "UI/UX Community",
-    lastMessage: "Jane: That looks great!",
-    time: "4h",
-    unread: false,
-    avatar: "https://i.pravatar.cc/150?u=2",
-  },
-  {
-    id: "4",
-    name: "Tech Bros",
-    lastMessage: "Sent an attachment.",
-    time: "1d",
-    unread: true,
-    avatar: "https://i.pravatar.cc/150?u=3",
-  },
-  {
-    id: "5",
-    name: "Emily Clark",
-    lastMessage: "Active yesterday",
-    time: "",
-    unread: false,
-    avatar: "https://i.pravatar.cc/150?u=4",
-  },
-  {
-    id: "6",
-    name: "Mike Ross",
-    lastMessage: "See you soon!",
-    time: "2d",
-    unread: false,
-    avatar: "https://i.pravatar.cc/150?u=5",
-  },
-  {
-    id: "7",
-    name: "Sarah Lee",
-    lastMessage: "Loved it!",
-    time: "3d",
-    unread: false,
-    avatar: "https://i.pravatar.cc/150?u=6",
-  },
-];
+import { MOCK_CHATS, MOCK_NOTES } from "@/features/social/mock-data";
 
 export default function ChatListScreen() {
   const [search, setSearch] = useState("");
@@ -207,7 +111,7 @@ export default function ChatListScreen() {
       <View className="flex-row items-center justify-between px-4 py-3">
         <View className="flex-row items-center gap-1">
           <ThemedText className="font-bold text-[22px] text-black dark:text-white">
-            username
+           Rafayel
           </ThemedText>
           <Ionicons
             name="chevron-down"

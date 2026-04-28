@@ -5,28 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 
 import { ThemedText } from "@/components/themed-text";
-
-const CHAT_META: Record<string, { name: string; status: string }> = {
-  "1": { name: "Jane Doe", status: "Active now" },
-  "2": { name: "John Smith", status: "Active 1h ago" },
-  "3": { name: "UI/UX Community", status: "23 members online" },
-  "4": { name: "Tech Bros", status: "5 members online" },
-  "5": { name: "Emily Clark", status: "Active yesterday" },
-  "6": { name: "Mike Ross", status: "Active 2d ago" },
-  "7": { name: "Sarah Lee", status: "Active 3d ago" },
-};
-
-const MESSAGES: Record<string, { id: string; text: string; mine: boolean; time: string }[]> = {
-  "1": [
-    { id: "1", text: "Hey! Did you check the reel?", mine: false, time: "09:12" },
-    { id: "2", text: "Yes, looked great.", mine: true, time: "09:13" },
-    { id: "3", text: "Sending one more.", mine: false, time: "09:14" },
-  ],
-  "2": [
-    { id: "1", text: "Are we shipping today?", mine: false, time: "10:01" },
-    { id: "2", text: "Yes, after QA signs off.", mine: true, time: "10:03" },
-  ],
-};
+import { CHAT_META, MESSAGES } from "@/features/social/mock-data";
 
 export default function ChatConversationScreen() {
   const router = useRouter();

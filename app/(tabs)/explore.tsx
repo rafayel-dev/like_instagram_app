@@ -12,16 +12,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 
 import { ThemedText } from "@/components/themed-text";
-
-const SUGGESTIONS = [
-  { id: "1", name: "Jane Doe", handle: "@janedoe", topic: "Design", avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d", chatId: "1" },
-  { id: "2", name: "John Smith", handle: "@johnsmith", topic: "React Native", avatar: "https://i.pravatar.cc/150?u=1", chatId: "2" },
-  { id: "3", name: "UI/UX Community", handle: "@uiux", topic: "Community", avatar: "https://i.pravatar.cc/150?u=2", chatId: "3" },
-  { id: "4", name: "Tech Bros", handle: "@techbros", topic: "Startups", avatar: "https://i.pravatar.cc/150?u=3", chatId: "4" },
-  { id: "5", name: "Emily Clark", handle: "@emily", topic: "Product", avatar: "https://i.pravatar.cc/150?u=4", chatId: "5" },
-];
-
-const TRENDING = ["Design Systems", "React Native", "Product Thinking", "Startup Tools"];
+import { SUGGESTIONS, TRENDING } from "@/features/social/mock-data";
 
 export default function ExploreScreen() {
   const [query, setQuery] = useState("");
